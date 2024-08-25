@@ -40,7 +40,7 @@ const Post = ({ post, id }) => {
           </Link>
            
         )}
-        <Icons/>
+        <Icons id={id}/>
       </div>
     </div>
   );
