@@ -83,6 +83,7 @@ const Input = () => {
     setImageFileUrl(null);
     setText('');
     setSelectedFile(null);
+    location.reload();
   };
 
   if (!session) return null;
