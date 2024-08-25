@@ -13,22 +13,34 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-     <SeesionWrapper>
-          <html lang="en">
-      <body className={inter.className}>
-        <div className="flex justify-between max-w-6xl mx-auto">
-              <div className="hidden sm:inline  border-r h-screen"><Sidebar/></div>
-              <div className="w-2xl flex-1" >   {children}</div>
-              <div className="lg:flex-col p-3  h-screen border-l lg:flex w-[24rem] hidden">
-                <div className="py-2 bg-white sticky top-0">
-                  <input className="bg-gray-100 border border-gray-200 w-full rounded-3xl px-4 py-2 text-sm" type="text" placeholder="Search.."></input>
-                </div>
-                
-                <News/></div>
+    <SeesionWrapper>
+      <html lang="en">
+        <body className={inter.className}>
+          <div className="flex justify-between max-w-6xl mx-auto">
+            {/* Sidebar */}
+            <div className="hidden sm:inline-flex h-screen sticky top-0">
+              <Sidebar />
+            </div>
 
-        </div>
-     </body>
-    </html>
-     </SeesionWrapper>
+            {/* Main Content */}
+            <div className="w-2xl flex-1 overflow-y-auto">
+              {children}
+            </div>
+
+            {/* News Section */}
+            <div className="hidden lg:flex flex-col p-3 h-screen border-l w-[24rem]">
+              <div className="py-2 bg-white sticky top-0">
+                <input
+                  className="bg-gray-100 border border-gray-200 w-full rounded-3xl px-4 py-2 text-sm"
+                  type="text"
+                  placeholder="Search.."
+                />
+              </div>
+              <News />
+            </div>
+          </div>
+        </body>
+      </html>
+    </SeesionWrapper>
   );
 }

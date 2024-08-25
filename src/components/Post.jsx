@@ -1,14 +1,15 @@
 import Link from "next/link";
 import { HiDotsHorizontal } from "react-icons/hi";
+import Icons from "./Icons";
 
 const Post = ({ post, id }) => {
   return (
-    <div className="flex p-3 border-b border-gray-200">
+    <div className="flex p-3 border-b border-gray-100 hover:bg-gray-200">
       {/* User Profile Image */}
       <img 
         src={post?.profileImg} 
         alt={`${post?.name}'s profile`} 
-        className="h-10 w-10 rounded-full mr-4 object-cover" 
+        className="h-11 w-11 rounded-full mr-4 object-cover" 
       />
       
       <div className="flex-1">
@@ -37,7 +38,9 @@ const Post = ({ post, id }) => {
               className="rounded-2xl mt-2 cursor-pointer max-h-[250px] object-cover" 
             />
           </Link>
+           
         )}
+        <Icons/>
       </div>
     </div>
   );
