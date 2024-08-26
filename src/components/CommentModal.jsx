@@ -13,6 +13,7 @@ const CommentModal = () => {
   const [open, setOpen] = useRecoilState(modalState);
   const [postId, setPostId] = useRecoilState(postIdState);
   const [post, setPost] = useState({});
+  const [input, setInput] = useState("");
   const { data: session } = useSession();
   const db = getFirestore(app);
 
@@ -31,6 +32,15 @@ const CommentModal = () => {
       return () => unsubscribe();
     }
   }, [postId]);
+
+const sendComment = async ()=>{
+  try {
+
+  } catch (error) {
+    console.error("Error adding document: ", error);
+  }
+}
+
 
   return (
     <div>
@@ -74,6 +84,27 @@ const CommentModal = () => {
                 alt="commenter-image "
                 className="rounded-full h-11 w-11 cursor-pointer hover:brightness-90"
               />
+              <div className="w-full divide-y divide-gray-200">
+                <div className="">
+                  <textarea
+                    className="w-full border-none outline-none tracking-wide min-h-[50px] text-gray-700 placeholder:text-gray-500 "
+                    placeholder="Whats Happening"
+                    rows={"2"}
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                  ></textarea>
+                </div>
+                <div className="flex items-center justify-end pt-2.5">
+                  <button
+                    className="bg-blue-400 text-white px-4 py-1.5 rounded-full font-bold
+                shadow-md hover:brightness-95 disabled:opacity-50"
+                disabled={input.trim() === ""}
+                onClick={sendComment}
+                  >
+                    Reply
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </Modal>
