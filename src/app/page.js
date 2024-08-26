@@ -1,5 +1,5 @@
 import Feed from '@/components/Feed'
-import Icons from '@/components/Icons'
+
 import Input from '@/components/Input'
 import React from 'react'
 
