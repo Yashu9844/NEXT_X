@@ -1,8 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Twitter/X Clone
+
+THE LIVE DEMO OF X-CLONE -- [Live Demo](https://x-next-git-main-yashu9844s-projects.vercel.app/)
+
+This project is a Twitter (X) clone built with Next.js, where users can sign in, create posts, comment, like, and delete both posts and comments.
+
+## Features
+
+- **User Authentication:** Sign in using NextAuth.js.
+- **Post Management:** Create, like, and delete posts.
+- **Comment System:** Add, like, and delete comments on posts.
+- **Responsive Design:** Optimized for various screen sizes.
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally:
 
 ```bash
 npm run dev
@@ -12,25 +23,3 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
