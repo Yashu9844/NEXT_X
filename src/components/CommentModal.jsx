@@ -38,6 +38,7 @@ const CommentModal = () => {
 const sendComment = async ()=>{
   try {
     addDoc(collection(db,'posts', postId,'comments'),{
+      userId:session.user.uid,
       name:session.user.name,
       username:session.user.username,
       userImg:session.user.image,
@@ -45,7 +46,7 @@ const sendComment = async ()=>{
       timestamp: new Date(),
     }).then(()=>{
       setInput("");
-    setOpen(false);
+    setOpen(false);;
     router.push(`/posts/${postId}`);
     }).catch((error)=>{
       console.error("Error adding document: ", error);

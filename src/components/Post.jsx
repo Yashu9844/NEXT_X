@@ -31,14 +31,13 @@ const Post = ({ post, id }) => {
 
         {/* Post Image */}
         {post?.imageUrl && (
-          <Link href={`/posts/${id}`}>
+          <Link href={`/posts/${id}`} >
             <img 
               src={post?.imageUrl} 
               alt={`Image for ${post?.text}`} 
               className="rounded-2xl mt-2 cursor-pointer max-h-[250px] object-cover" 
             />
           </Link>
-           
         )}
         <Icons id={id} uid={post.uid}/>
       </div>

@@ -29,7 +29,7 @@ useEffect(()=>{
     <div>
       {
      comments.map((comment)=>(
-        <Commment key={comment.id} comment={comment.data()} id={comment.id} />
+        <Commment key={comment.id} comment={comment.data()} commentId={comment.id} originalPostId={id} />
      ))
       }
     </div>
